@@ -7,7 +7,7 @@ from version import __version__
 app = Flask(__name__)
 
 # Setup Talisman
-Talisman(app, content_security_policy=None)
+#Talisman(app, content_security_policy=None)
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
