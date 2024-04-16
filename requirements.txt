@@ -2,5 +2,3 @@ Flask==2.3.2
 Werkzeug== 3.0.1
 Waitress==3.0.0
 Flask-Talisman==1.1.0
-pytest==8.1.1
-Flask-Testing==0.8.1
