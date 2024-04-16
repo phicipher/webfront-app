@@ -8,6 +8,17 @@ app = Flask(__name__)
 
 # Setup Talisman
 #Talisman(app, content_security_policy=None)
+talisman = Talisman(
+    app,
+    content_security_policy= {
+    'default-src': [
+        '\'self\'',
+        'https://trusted-site.com',  # Example: Add URLs of trusted sources
+        'http://localhost:8080'      # Allow local server during development
+    ]
+                            },
+    force_https=False                # Disabling HTTPS enforcement for Docker testing
+)
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
