@@ -17,9 +17,9 @@ def home():
     try:
         container_id = socket.gethostname()  # Get the current container ID using the hostname
         logging.info("Home page accessed, displaying container ID.")
-        return render_template('index.html', container_id=container_id)
+        return render_template('index.html', container_id=container_id, version=__version__)
     except Exception as e:
-        logging.error("Error accessing home page: %s", e)
+        logging.error("Error accessing home page: %s", str(e))
         return jsonify({"error": "Internal server error"}), 500
 
 @app.route('/health')
@@ -29,4 +29,3 @@ def health():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
-
