@@ -29,7 +29,7 @@ USER appuser
 # Expose port 8080 for the application
 EXPOSE 8080
 
-# Command to run the application using Gunicorn
+# Command to run the application using Waitress
 CMD ["waitress-serve", "--port=8080", "app:app"]
 
 # Healthcheck to make sure the container is ready
