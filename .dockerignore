@@ -4,6 +4,7 @@ __pycache__
 *.pyd
 .Python
 env
+venv
 pip-log.txt
 pip-delete-this-directory.txt
 .tox
@@ -18,3 +19,5 @@ coverage.xml
 .mypy_cache
 .pytest_cache
 .hypothesis
+test_app.py
+.bumpversion.cfg
