@@ -7,13 +7,11 @@ from version import __version__
 app = Flask(__name__)
 
 # Setup Talisman
-#Talisman(app, content_security_policy=None)
 talisman = Talisman(
     app,
     content_security_policy= {
     'default-src': [
         '\'self\'',
-        'https://trusted-site.com',  # Example: Add URLs of trusted sources
         'http://localhost:8080'      # Allow local server during development
     ]
                             },
